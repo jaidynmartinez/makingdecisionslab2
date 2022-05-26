@@ -9,7 +9,6 @@ var arr = [10,20,30,40,50,60]
 //Code Here
 
 let firstItem = arr[0] 
-  console.log(arr [0])
 
 
 
@@ -19,6 +18,9 @@ let firstItem = arr[0]
 */
 
 //Code Here
+
+LastItemRemoved = arr.pop()
+// console.log(arr)
 
 ////////// PROBLEM 3 //////////
 
@@ -32,7 +34,8 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 
 //Code Here
 
-
+for(let i = 0; i < family.length; i++)
+console.log(family[i])
 
 ////////// PROBLEM 4 //////////
 
@@ -46,7 +49,11 @@ let evensArr = []
 */
 
 //Code Here
-
+for(let i = 0; i < nums.length; i++){
+  if (nums[i] % 2 === 0)
+    evensArr.push(nums[i])
+} 
+console.log(evensArr)
 
 
 ////////// PROBLEM 5 //////////
@@ -60,6 +67,16 @@ var score = 74
 */
 
 //Code Here
+
+if (score >= 90){
+  console.log('A')
+} else if (score >= 80 && score <= 89){
+  console.log('B')
+} else if (score >= 70 && score <= 79){
+  console.log('C')
+} else if (score >= 60 && score <= 69){
+  console.log('D')
+} else console.log('F')
 
 
 ////////// Intermediate Problems //////////
@@ -76,6 +93,9 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 
 //Code Here
 
+let someNum = myFavoriteNumbers[4]
+console.log(myFavoriteNumbers) 
+
 
 ////////// PROBLEM 7 //////////
 
@@ -83,6 +103,13 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
+
+if (myFavoriteNumbers.length < 7){
+  console.log('There are not enough elements in this array')
+} else if (myFavoriteNumbers.length > 7){
+  someNum = myFavoriteNumbers[6]
+  console.log('someNum')
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -94,6 +121,12 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
+
+for (let i = 0; i < listOfNumbers.length; i++)
+if (listOfNumbers[i] % 3 === 0) {
+  console.log(`${listOfNumbers[i]} is divisible by 3`)
+}
+
 
 
 ////////// PROBLEM 9 //////////
@@ -107,6 +140,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 //Code Here
 
+for (let i = letters.length - 1; i >= 0; i--){
+  console.log(letters[i]);
+}
 
 ////////// Advanced Problems //////////
 
@@ -129,8 +165,25 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 
 //Code Here
 
-
-
+switch (letterGrade) {
+  case 'A':
+    console.log("The student is doihng excellently.");
+    break;
+  case 'B':
+    console.log("The student is doing well.");
+    break;
+  case'C':
+    console.log("The student is doing alright.")
+    break;
+  case'D':
+    console.log("The student is not doing very well.")
+    break;
+  case'F':
+    console.log("The student is failing")
+    break;
+  default:
+    console.log("Not an eligible grade.")
+}
 ////////// PROBLEM 11 //////////
 /* The famous FizzBuzz, Devmountain style!
   Create a for loop that iterates from 1 to 100. In this for loop, using some conditional logic, if the number your for loop is currently on is divisible by 3, console.log 'Dev'. If the number is divisible by 5, console.log 'mountain'. If the number is divisible by 5 & 3, console.log 'Devmountain'. If the number is not divisible by 5 or 3, console.log the number itself. Hint: Look up the modulo operator.
@@ -156,3 +209,13 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+
+for(let i = 1; i < 100; i++){
+  if (i % 15 === 0)
+  console.log('DevMountain');
+else if(i  % 3 === 0)
+  console.log('Dev');
+else if(i % 5 === 0)
+  console.log('Mountain');
+  else console.log(i)
+}
